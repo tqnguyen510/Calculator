@@ -37,7 +37,7 @@ public class Checkvalid {
                 }
 
             } catch (Exception e) {
-                System.out.println("Vui long nhap lai: ");
+                System.out.println("Vuii long nhap lai: ");
                  sc.nextLine();
             }
         }
