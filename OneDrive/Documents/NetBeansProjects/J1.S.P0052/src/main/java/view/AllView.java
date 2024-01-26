@@ -2,6 +2,8 @@ package view;
 
 import common.Checkvalid;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 import model.Country;
 import model.EastAsiaCountries;
@@ -40,5 +42,13 @@ public class AllView {
             }
         }
         return SearchList;
+    }
+    public void DisplaySortView( ArrayList<EastAsiaCountries> list)
+    {   //Collections.sort(list.nam);
+        System.out.println("ID       Name       Total Area       Terrain");
+        for (EastAsiaCountries l: list){
+         System.out.printf("%s       %s       %3f       %s\n",l.getCountryCode(),l.getCountryName(),l.getTotalArea(),l.getCountryTerrain());   
+        }
+        
     }
 }

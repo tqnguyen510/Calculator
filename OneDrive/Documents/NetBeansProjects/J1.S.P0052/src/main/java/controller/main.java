@@ -14,6 +14,7 @@ public class main {
     public static void main(String[] args) {
         ManageEastAsiaCountries manager = new ManageEastAsiaCountries();
         AllView view = new AllView();
+        boolean x = true;
         do {
            int choice = view.MenuView();
             switch(choice)
@@ -26,13 +27,16 @@ public class main {
                      break;
                 case 3:
                     manager.SearchCountry();
+                    break;
                 case 4:
                     manager.SortCountry();
-                default :
                     break;
-                
+                case 5:
+                    x=false;
+                default : 
+                    break;
             }
 
-        } while (true);
+        } while (x);
     }
 }

@@ -7,6 +7,7 @@ import model.Country;
 import model.EastAsiaCountries;
 import view.AllView;
 import view.Menu;
+import model.CountryComparator;
 public class ManageEastAsiaCountries {
     AllView View= new AllView();
     ArrayList<EastAsiaCountries> CountryList= new ArrayList<>();
@@ -20,14 +21,13 @@ public class ManageEastAsiaCountries {
        View.DisplayView(CountryList);
    }
    public void SearchCountry()
-   {  ArrayList<EastAsiaCountries> SearchList = new ArrayList<>();
-        
-    View.DisplayView( View.SearchView(CountryList));
+   {  
+        View.DisplayView(View.SearchView(CountryList));
    }
    public void SortCountry()
    {
-      // Collections.sort(CountryList);
-       View.DisplayView(CountryList);
+      Collections.sort(CountryList,new CountryComparator());
+      View.DisplayView(CountryList);
    }
    
 }
